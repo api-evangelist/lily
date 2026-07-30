@@ -1,0 +1,56 @@
+generated: '2026-07-19'
+method: searched
+source: live HTTP probes of lily.camera and the Supabase backend host
+summary:
+  documents_found: 0
+  note: >-
+    No /.well-known documents are published on either host. Recorded as
+    negative evidence so re-runs do not re-probe. No WellKnown or SecurityTxt
+    pointer is wired into apis.yml because nothing was found.
+hosts:
+- host: https://lily.camera
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /llms.txt
+    status: 404
+  - path: /openapi.json
+    status: 404
+  - path: /sitemap.xml
+    status: 404
+  - path: /robots.txt
+    status: 200
+    note: >-
+      Present. Allows all crawlers and points Sitemap at the Supabase edge
+      function below rather than a local sitemap.xml.
+- host: https://yqwnspsgygyfledhsbea.supabase.co
+  note: >-
+    Supabase backend referenced from the lily.camera robots.txt Sitemap
+    directive. Probed for completeness; it is managed Supabase
+    infrastructure, not a first-party documented API.
+  documents:
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /rest/v1/
+    status: 401
+    note: >-
+      Supabase PostgREST default endpoint. Requires an apikey; no public
+      OpenAPI was retrieved and no credentials were used to probe further.
+  - path: /auth/v1/settings
+    status: 401
+  - path: /functions/v1/sitemap
+    status: 200
+    note: >-
+      Returns a sitemap whose <loc> entries point at dronehub.com with
+      Portuguese-language paths (/pilotos, /comparacoes), not lily.camera —
+      evidence the backend project is reused from a different application.
