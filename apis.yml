@@ -1,19 +1,64 @@
 aid: lily
-name: lily
-description: lily is a company surfaced as a portfolio company of slow-ventures and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+name: Lily Camera
+description: >-
+  The domain lily.camera currently serves "Lily Camera", a consumer-facing
+  marketplace that connects clients with certified drone pilots for aerial
+  photography and videography across real estate, events, agriculture,
+  construction, and media production. It is a client-rendered single-page
+  application: every requested path returns the same HTML shell, and the
+  routes defined in its JavaScript bundle cover browsing pilots and drones,
+  comparisons, bookings, messaging, a pilot dashboard, and a drone raffle.
+  There is no public API, no developer portal, no documentation, no OpenAPI
+  or other machine-readable specification, no SDKs, and no /.well-known
+  discovery surface. The site is built on Lovable (GPT Engineer), monetized
+  with Google AdSense, and backed by a hosted Supabase project. No API
+  artifacts could be harvested because the provider publishes none.
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://storage.googleapis.com/gpt-engineer-file-uploads/E6gEieV4jxOuY96fHi8UJOi8tw52/social-images/social-1771970954157-drone.webp
 url: https://raw.githubusercontent.com/api-evangelist/lily/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - slow-ventures
 x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier-reason: no-api-surface
+x-identity-verified: false
+x-enrichment-flag: >-
+  IDENTITY MISMATCH — REVIEW THIS LEAD. This repo was created from a
+  slow-ventures portfolio listing for a company named "lily", and the domain
+  lily.camera was attached to it. Enrichment found no evidence that the site
+  now at lily.camera is that portfolio company: it is an AI-app-builder site
+  (assets served from storage.googleapis.com/gpt-engineer-file-uploads, i.e.
+  Lovable / GPT Engineer), it carries Google AdSense publisher
+  ca-pub-1194659536048915, and its Supabase backend
+  (yqwnspsgygyfledhsbea.supabase.co) serves a sitemap listing dronehub.com
+  URLs with Portuguese-language paths, indicating a reused project. The
+  x-backed-by association above is unverified and should not be treated as
+  fact until the correct company and domain are confirmed. Traffic and volume
+  figures shown on the site (pilot counts, completed projects, ratings) are
+  unverified self-reported marketing claims and are deliberately not recorded
+  here.
+x-no-api-surface: true
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
+- Drones
+- Aerial Photography
+- Videography
+- Photography
+- Marketplace
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,3 +68,20 @@ maintainers:
 common:
 - type: Website
   url: https://lily.camera
+- type: About
+  url: https://lily.camera/about
+- type: Support
+  url: https://lily.camera/contact
+- type: FAQ
+  url: https://lily.camera/faq
+- type: Login
+  url: https://lily.camera/login
+- type: SignUp
+  url: https://lily.camera/pilot/register
+- type: DomainSecurity
+  url: security/lily-domain-security.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
