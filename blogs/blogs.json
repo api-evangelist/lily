@@ -1,0 +1,14 @@
+{
+  "repo": "lily",
+  "feeds": [
+    {
+      "source": "https://www.lily.camera/feeds/posts/default",
+      "feed_url": "https://www.lily.camera/feeds/posts/default",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    }
+  ],
+  "post_count": 0,
+  "fetched": "2026-10-10T13:15:00Z"
+}
